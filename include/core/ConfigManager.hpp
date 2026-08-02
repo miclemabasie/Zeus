@@ -38,6 +38,8 @@ public:
     void reload();
 
 private:
+    nlohmann::json data_;
+
     /*
      * @brief Recursively traverse a dot-separeated key path (e.g., "collector.port")
      * @tparam T the expected return type (int, size_t, string, etc)
@@ -85,7 +87,7 @@ T ConfigManager::getValue(const std::string &key_path, T default_value) const
         else
         {
             // key missing: return default
-            return default_value
+            return default_value;
         }
     }
 
@@ -94,7 +96,7 @@ T ConfigManager::getValue(const std::string &key_path, T default_value) const
     {
         return current.get<T>();
     }
-    catch (cosnt nlohmann::json::type_error &e)
+    catch (const nlohmann::json::type_error &e)
     {
         throw std::runtime_error("Type mismatch for key: " + key_path + ", " + e.what());
     }
