@@ -1,0 +1,19 @@
+{
+    "collector": {
+        "port": 8080,
+        "max_connections": 10000
+    },
+    "queue": {
+        "max_size": 500000
+    },
+    "worker_pool": {
+        "count": 8
+    },
+    "storage": {
+        "discovery": "/var/log/zeus"
+    },
+    "logger": {
+        "level": "INFO",
+        "file": "zeus.log"
+    }
+}
