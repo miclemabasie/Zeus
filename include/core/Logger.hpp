@@ -38,7 +38,7 @@ public:
 
     // Control
     void setLevel(LogLevel level);
-    LogLevel getlevel() const;
+    LogLevel getLevel() const;
     void flush();
 
     // Testing hooks

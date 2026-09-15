@@ -1,7 +1,7 @@
 # Create a static library for all core modules
 add_library(zeus_core STATIC
-    core/ConfigManager.cpp   # Note the capital 'M'!
-    # We will add Logger.cpp and LogMessage.cpp here later
+    core/ConfigManager.cpp  
+    core/Logger.cpp
 )
 
 # Link dependencies to the core library

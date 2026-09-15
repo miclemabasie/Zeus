@@ -1,7 +1,7 @@
 # Unit test execution
 add_executable(zeus_tests
     core/test_config.cpp
-    # add more test files later
+    core/test_logger.cpp
 )
 
 

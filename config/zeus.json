@@ -14,6 +14,6 @@
     },
     "logger": {
         "level": "INFO",
-        "file": "zeus.log"
+        "file": "../logs/zeus.log"
     }
 }
