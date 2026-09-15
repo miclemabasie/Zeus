@@ -2,7 +2,6 @@
 
 ## Architecture Design Document (Version 1.0)
 
----
 
 ### Table of Contents
 
@@ -38,12 +37,12 @@ Design and implement a high‑performance, modular, and extensible telemetry pla
 
 The system emphasises:
 
-- **High throughput** – handle millions of events per second.
-- **Reliability** – no data loss, graceful degradation.
-- **Scalability** – scale horizontally by adding workers or storage nodes.
-- **Maintainability** – each component is isolated and replaceable.
-- **Observability** – expose internal metrics for monitoring.
-- **Modern C++** – leverage C++17/20 for performance and safety.
+- **High throughput:** handle millions of events per second.
+- **Reliability:** no data loss, graceful degradation.
+- **Scalability:** scale horizontally by adding workers or storage nodes.
+- **Maintainability:** each component is isolated and replaceable.
+- **Observability:** expose internal metrics for monitoring.
+- **Modern C++:** leverage C++17/20 for performance and safety.
 
 The architecture intentionally mirrors modern observability systems (e.g., Loki, Elasticsearch, Datadog) while remaining small enough for a single engineer to build incrementally.
 
