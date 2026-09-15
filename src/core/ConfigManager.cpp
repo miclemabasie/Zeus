@@ -118,3 +118,15 @@ void ConfigManager::reload()
     // just throw and error for now
     throw std::runtime_error("reload() is not yet implemented in this version");
 }
+
+void ConfigManager::showConfigScheme() const
+{
+    std::cout << "=== Current Config Values ===" << std::endl;
+    std::cout << "  Collector Port: " << getCollectorPort() << std::endl;
+    std::cout << "  Max Connections: " << getMaxConnections() << std::endl;
+    std::cout << "  Queue Max Size: " << getQueueMaxSize() << std::endl;
+    std::cout << "  Worker Count: " << getWorkerCount() << std::endl;
+    std::cout << "  Storage Dir: " << getStorageDirectory() << std::endl;
+    std::cout << "  Log Level: " << getLogLevel() << std::endl;
+    std::cout << "  Log File: " << getLogFile() << std::endl;
+}

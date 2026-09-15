@@ -37,6 +37,9 @@ public:
     // --- Roload (stub for now) ---
     void reload();
 
+    // --- Show the config schema
+    void showConfigScheme() const;
+
 private:
     nlohmann::json data_;
 

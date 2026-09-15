@@ -831,6 +831,11 @@ class Logger {
 public:
     static Logger& getInstance(); // singleton
 
+    Logger(const Logger&) = delete;
+    Logger& operator=(const Logger&) = delete;
+    Logger(Logger&&) = delete;
+    Logger& operator(Logger&&) = delete;
+
     void setLevel(Level level);
 
     void info(const std::string& msg);

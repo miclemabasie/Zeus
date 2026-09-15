@@ -17,21 +17,12 @@ int main(int argc, char *argv[])
         }
 
         std::cout << "=== Zeus Smoke Test ===" << std::endl;
-        std::cout << "Loading config from: " << config_path << std::endl;
+        std::cout << "Loading config from '" << config_path << "' ..." << std::endl;
 
         ConfigManager config(config_path);
+        std::cout << "=== Config loaded successfully ===" << std::endl;
 
-        std::cout << "Config loaded successfully!" << std::endl;
-        std::cout << "  Collector Port: " << config.getCollectorPort() << std::endl;
-        std::cout << "  Max Connections: " << config.getMaxConnections() << std::endl;
-        std::cout << "  Queue Max Size: " << config.getQueueMaxSize() << std::endl;
-        std::cout << "  Worker Count: " << config.getWorkerCount() << std::endl;
-        std::cout << "  Storage Dir: " << config.getStorageDirectory() << std::endl;
-        std::cout << "  Log Level: " << config.getLogLevel() << std::endl;
-        std::cout << "  Log File: " << config.getLogFile() << std::endl;
-
-        std::cout << std::endl
-                  << "Foundation is solid. Ready for module 2!" << std::endl;
+        // config.showConfigScheme();
 
         return 0;
     }
