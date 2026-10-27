@@ -110,6 +110,7 @@ std::string Logger::getTimestamp() const
 #if defined(_WIN32)
     localtime_s(&tm_buf, &time_t_now);
 #else
+    // linux systems
     localtime_r(&time_t_now, &tm_buf);
 #endif
 
