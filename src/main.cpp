@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
         ConfigManager config(config_path);
 
         // 2. Initialize logger with config
-        Logger::getInstance().initialize(config);
+        Logger::getInstance().initialize(config); // singleton
 
         // 3. Now use it anywhere
         Logger::getInstance().info("=== Zeus Smoke Test ===");
